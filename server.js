@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/my-first-project'));
+app.use(express.static('./dist/spotiapp'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/my-first-project/'}),
+    res.sendFile('index.html', {root: 'dist/spotiapp/'}),
 );
 
 app.listen(process.env.PORT || 8080);
